@@ -1,0 +1,16 @@
+{
+  "name": "macos_install_vscode_test",
+  "version": "1.0.0",
+  "description": "1. Install node and typescript. 2. Install ESLint extensions. (merged with TSLint already) 3. Install material icon theme as extension.  4. Install path intellisense as extension for imports.  5. Prettier - Code formatter (like black and isort in python).  6. Create `index.html` via `html:5` in your file. And include the js file. 7. `tsc app.ts` to generate the javascript.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
