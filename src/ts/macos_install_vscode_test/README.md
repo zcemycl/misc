@@ -9,3 +9,14 @@
 8. Run `npm init` and `npm install lite-server`. 
 9. Add a line to package.json to start with lite-server. This should give real-time update.
 10. Run `npm start`.
+
+### How to use compiler? 
+1. Run watch mode to tsc, only for one file. 
+    ```
+    tsc app.ts -w
+    ```
+2. Run the followings, 
+    ```
+    tsc --init
+    tsc -w // for compiling all
+    ```
