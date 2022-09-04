@@ -20,3 +20,5 @@
     tsc --init
     tsc -w // for compiling all
     ```
+3. Use sourceMap in tsconfig. This can help debugging in the browser to view ts scripts, and adding breakpoints.
+4. Use outdir as dist so it stores all js files. 

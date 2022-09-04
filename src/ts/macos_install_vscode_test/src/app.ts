@@ -77,7 +77,7 @@ returnUndefined();
 // Function
 let handleFunc: (a: number, b: number) => number;
 handleFunc = add;
-console.log(handleFunc(2,3));
+console.log(handleFunc(2, 3));
 
 // Callback
 function addAndHandle(n1: number, n2: number, cb: (num: number) => void) {
@@ -93,13 +93,14 @@ addAndHandle(10, 20, (result) => {
 let userInput: unknown;
 let userName: string;
 userInput = 5;
-userInput = 'Max';
-if (typeof userInput === "string") { // need this check for unknown
+userInput = "Max";
+if (typeof userInput === "string") {
+  // need this check for unknown
   userName = userInput;
 }
 
 // never type -> for throw error
 function generateError(message: string, code: number): never {
-  throw {message: message, errorCode: code}
+  throw { message: message, errorCode: code };
 }
-generateError("Hello error!", 500);
+generateError("Hello error! ", 500);

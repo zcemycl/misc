@@ -1,3 +1,4 @@
 *.o
 *.dSYM
 node_modules
+*.map
