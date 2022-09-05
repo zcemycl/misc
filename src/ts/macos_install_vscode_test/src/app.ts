@@ -100,7 +100,7 @@ if (typeof userInput === "string") {
 }
 
 // never type -> for throw error
-function generateError(message: string, code: number): never {
-  throw { message: message, errorCode: code };
-}
-generateError("Hello error! ", 500);
+// function generateError(message: string, code: number): never {
+//   throw { message: message, errorCode: code };
+// }
+// generateError("Hello error! ", 500);

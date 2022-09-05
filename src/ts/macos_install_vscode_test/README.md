@@ -10,7 +10,7 @@
 9. Add a line to package.json to start with lite-server. This should give real-time update.
 10. Run `npm start`.
 
-### How to use compiler? 
+### How to use compiler+debugger? 
 1. Run watch mode to tsc, only for one file. 
     ```
     tsc app.ts -w
@@ -21,4 +21,6 @@
     tsc -w // for compiling all
     ```
 3. Use sourceMap in tsconfig. This can help debugging in the browser to view ts scripts, and adding breakpoints.
-4. Use outdir as dist so it stores all js files. 
+4. Use outdir as `dist` so it stores all js files. 
+5. Use rootdir with `src` so it will only scan `src`.
+6. Run `npm start`. If you go to sources, you can introduce breakpoints to `src/*.ts`. 
