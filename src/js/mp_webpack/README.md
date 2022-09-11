@@ -9,3 +9,7 @@
     ```
     npm install --save-dev webpack webpack-cli lite-server
     ```
+
+### References
+1. [Creating Multiple Bundles for Multiple Pages with Webpack - Ep. 7](https://www.youtube.com/watch?v=PcPzKMZzyqc)
+2. [SPAs vs MPAs/MVC - Are Single Page Apps always better?](https://www.youtube.com/watch?v=F_BYg2QGsC0)
