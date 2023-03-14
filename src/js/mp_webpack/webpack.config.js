@@ -3,7 +3,6 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const glob = require("glob");
-// const path = require('path');
 
 const entry = glob.sync("src/**/*.js")
     .reduce((x,y) => Object.assign(x, {
