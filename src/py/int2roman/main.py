@@ -16,10 +16,10 @@ def convert_int_to_roman(number: int) -> str:
         result = new+result
         number //= 10
         symbols.pop(0)
-        if len(symbols)>1:
+        if len(symbols)>0:
             symbols.pop(0)
     return result
 
 if __name__ == "__main__":
-    for number in [2018, 1999, 3999, 999]:
+    for number in [2018, 1999, 3999, 999, 444]:
         print(number, convert_int_to_roman(number))
