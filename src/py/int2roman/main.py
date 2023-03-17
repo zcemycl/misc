@@ -21,5 +21,5 @@ def convert_int_to_roman(number: int) -> str:
     return result
 
 if __name__ == "__main__":
-    for number in [2018, 1999, 3999, 999, 444]:
+    for number in [2018, 1999, 3999, 999, 444, 1994, 58, 3]:
         print(number, convert_int_to_roman(number))
