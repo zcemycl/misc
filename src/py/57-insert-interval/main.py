@@ -4,7 +4,7 @@ class Solution:
         res = []
         for interval in intervals:
             if interval[1]>=newInterval[0] and interval[0]<=newInterval[1]:
-                newInterval = [min(interval[0], newInterval[0]), 
+                newInterval = [min(interval[0], newInterval[0]) ,
                     max(interval[1], newInterval[1])]
             else:
                 if interval[0] > newInterval[0]:
