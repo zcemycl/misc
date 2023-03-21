@@ -9,6 +9,7 @@ class Solution {
 
     public void naive() {
         System.out.println("Hello World!");
+        System.out.println(random2);
     }
 
     public static void naive2() {
