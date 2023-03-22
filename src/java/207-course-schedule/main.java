@@ -14,23 +14,20 @@ class Solution {
         }
     }
     private boolean dfs(int i, HashSet<Integer> visited) {
-        if (this.adjls.getOrDefault(i, new ArrayList<Integer>()).size() == 0) {
-            this.cache.put(i, true);
+        if (this.adjls.getOrDefault(i, new ArrayList<Integer>()).size() == 0) 
             return true;
-        }
         if (visited.contains(i)) 
             return false;
-        HashSet newVisited = new HashSet();
-        newVisited = (HashSet)visited.clone();
-        newVisited.add(i);
         if (this.cache.containsKey(i))
             return this.cache.get(i);
+        visited.add(i);
         for (int child : this.adjls.getOrDefault(i, new ArrayList<Integer>())) {
-            boolean isFinish = this.dfs(child, newVisited);
+            boolean isFinish = this.dfs(child, visited);
             this.cache.put(child, isFinish);
             if (! isFinish)
                 return false;
         }
+        visited.remove(i);
         return true;
     }
     public boolean canFinish(int numCourses, int[][] prerequisites) {
