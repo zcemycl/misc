@@ -1,6 +1,6 @@
 testcases = [
     (7, [5, 3, 4, 7]),
-    (7, [1, 2]),
+    (7, [2, 1]),
     (1, [2, 5])
 ]
 
@@ -18,14 +18,10 @@ class Solution:
         for i in range(1, target+1):
             for coin in self.coins:
                 tmp = i-coin
-                if tmp > 0:
-                    tmpls = arr[tmp].copy()
-                    if len(tmpls)!=0:
-                        tmpls.append(coin)
-                        arr[i] = tmpls
-                        break
-                elif tmp == 0:
-                    tmpls = arr[tmp].copy()
+                if tmp < 0:
+                    continue
+                tmpls = arr[tmp].copy()
+                if len(tmpls)!=0 or tmp == 0:
                     tmpls.append(coin)
                     arr[i] = tmpls
                     break
