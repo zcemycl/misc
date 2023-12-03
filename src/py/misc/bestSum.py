@@ -2,7 +2,8 @@ testcases = [
     (7, [5, 3, 4, 7]),
     (7, [2, 1]),
     (7, [5, 3, 4, 1]),
-    (1, [2, 5])
+    (1, [2, 5]), 
+    # (100, [1, 2, 25])
 ]
 
 # bottom up
@@ -24,7 +25,7 @@ def recur(target, coins):
                 cur = tmp
     return cur
 
-# up bottom
+# top down
 class Solution:
     def __init__(self):
         self.res = None
@@ -44,6 +45,7 @@ class Solution:
             self.__call__(target-coin, 
                 coins, hist+[coin])
 
+# bottom up
 def recur2(target, coins, hist):
     if target < 0: 
         return None
