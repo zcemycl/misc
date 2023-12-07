@@ -5,26 +5,42 @@ test_cases = [
         2: [0, 1, 3],
         3: [2, 5],
         5: [3, 0]
+    },
+    {
+        0: [1, 4],
+        1: [0, 2],
+        2: [1, 3],
+        3: [2, 4],
+        4: [0, 3],
     }
 ]
 
 def shortestPath(s, e, adjacency_list):
-    queue = [(s, 0)]
+    queue = [(s, s, 0)]
     visited = set()
-    res = float('inf')
+    origins = {}
     while queue:
         print(queue)
-        cur = queue.pop(0)
-        cur_id, dis = cur
-        if cur_id == e:
-            res = min(res, dis)
-        visited.add(cur_id)
+        orig, dest, dis = queue.pop(0)
+        visited.add(dest)
+        if dest not in origins:
+            origins[dest] = (orig, dis)
+        if dest == e:
+            break
         dis += 1
-        for child in adjacency_list.get(cur_id, []):
+        for child in adjacency_list.get(dest, []):
             if child in visited and child != e:
                 continue
-            queue.append((child, dis))
-    return res
+            queue.append((dest, child, dis))
+    
+    trace = [dest]
+    cur = dest
+    while cur != s:
+        cur, _ = origins[cur]
+        trace.append(cur)
+    
+    return dis, trace
+
     
 
 
